@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap">
+    <title>Home · TotoCodeFR</title>
+    <link rel="shortcut icon" href="./assets/images/icon.png">
+    <style>
+        /* Reset some default styles to ensure consistency */
+        body, html {
+            margin: 0;
+            padding: 1;
+            height: 100%;
+            font-family: 'Comfortaa', Arial, sans-serif; /* Use Comfortaa font, fallback to Arial or sans-serif */
+            background-color: #f7b267;
+        }
+        
+        /* Style the content area */
+        .content {
+            flex: 1; /* Take up remaining space */
+            padding: 2%; /* Add some spacing using percentages */
+            margin-left: 20%; /* Ensure content doesn't go behind the sidebar using percentages */
+        }
+
+        /* Style links */
+        .links {
+            text-decoration: none;
+        }
+
+        /* Style title */
+        .title {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-300%); /* Center vertically */
+            right: 42.5%; /* Center horizontally */
+            font-size: 3vw; /* Responsive font size */
+        }
+
+        /* Style logo */
+        .logo {
+            display: block;
+            margin: 0 auto; /* Center horizontally */
+            width: 65%; /* Responsive width */
+        }
+
+        /* Style logo card */
+        .logo-card {
+            background-color: #f25c54;
+            border-radius: 30px;
+            border: 5px solid;
+            margin: auto;
+            width: 20%; /* Responsive width */
+            height: 40vh    ; /* Responsive height using viewport height */
+            padding: 2%; /* Add some spacing using percentages */
+            border-color: #90e0ef;
+        }
+
+        /* Style paragraphs */
+        p {
+            font-size: 1.5vw; /* Responsive font size */
+        }
+
+        .emoji {
+            font-size: 5vw; /* Responsive font size */
+        }
+
+        .socials {
+            color: blue;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .socials_div {
+            border-radius: 30px;
+            border: 2.5px solid;
+            margin: auto;
+            width: 7.5%; /* Responsive width */
+            height: 15vh; /* Responsive height using viewport height */
+            padding: 20px;
+            align-items: center;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 5vw; /* Adjust font size for smaller screens */
+                right: 40%; /* Adjust position for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-card">
+        <img src="assets/images/icon.png" class="logo" alt="Logo">
+        <h1 class="title">TotoCode</h1>
+    </div>
+    <div class="socials_div">
+        <a href="https://github.com/TotoCodeFR" class="socials">GitHub</a>
+        <h1></h1>
+        <a href="https://twitter.com/TotoCodeFR" class="socials">Twitter (X)</a>
+        <h1></h1>
+        <a href="https://www.youtube.com/channel/UCsSJ61agxSj5NX6Fd7pXs9w" class="socials">YouTube</a>
+        <h1></h1>
+        <a href="docs/index.html" class="socials">Documentation</a>
+    </div>
+    <h1 class="emoji">👋</h1>
+    <p>
+        Hello! I'm TotoCode, or with my common username: TotoCodeFR.
+    </p>
+    <h1></h1>
+    <p>
+        This is a website made by me to showcase some of the projects and things that I am working on.
+    </p>
+    <h1>Who am I?</h1>
+    <p id="my-info">I am a French developer (🥖). I code in Python for 9 months.</p>
+</body>
+</html>
