@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&display=swap');
+
+body {
+    font-family: "Comfortaa";
+    background-color: #2e2e42;
+    color: whitesmoke;
+}
+
+ping {
+    background-color: rgba(250, 250, 210, .5);
+    border-radius: 5px;
+    color: rgb(0, 247, 255);
+}
+
+.information {
+    border-radius: 5px;
+    color: lightblue;
+    border: 2px lightblue solid;
+    padding: 10px;
+}
+
+emoji {
+    font-family: 'Noto Emoji';
+}
+
+number {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+bold {
+    font-weight: bold;
+    font-size: 20px;
+}
