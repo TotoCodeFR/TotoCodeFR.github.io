@@ -4,6 +4,7 @@ body {
     font-family: "Comfortaa";
     background-color: #2e2e42;
     color: whitesmoke;
+    padding: 10px;
 }
 
 .title {
@@ -30,4 +31,20 @@ body {
     width: 10%;
     padding: 10px;
     border-radius: 10px;
+}
+
+.rules-button {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.rules-div {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: gray;
+    width: 10%;
+    padding: 10px;
+    border-radius: 10px;
+    padding-top: 10px;
 }
