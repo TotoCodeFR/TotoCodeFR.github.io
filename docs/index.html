@@ -3,123 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Docs · TotoCode</title>
-    <link rel="shortcut icon" href="./assets/images/icon.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap">
+    <title>Documentation | TotoCode</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300;400;700&display=swap">
+    <link rel="shortcut icon" href="../assets/images/icon.png">
     <style>
-        /* Reset some default styles to ensure consistency */
         body, html {
             margin: 0;
-            padding: 0;
+            padding: 5px;
             height: 100%;
-            font-family: 'Comfortaa', Arial, sans-serif; /* Use Comfortaa font, fallback to Arial or sans-serif */
-            background-color: #f7b267;
+            font-family: 'Fira Code', Arial, sans-serif;
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+        /* The sidebar menu */
+        .sidenav {
+            height: 100%; /* Full-height: remove this if you want "auto" height */
+            width: 160px; /* Set the width of the sidebar */
+            position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+            z-index: 1; /* Stay on top */
+            top: 0; /* Stay at the top */
+            left: 0;
+            background-color: #292929; /* Black */
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 20px;
         }
 
-        /* Create a container for the sidebar and content */
-        .container {
-            display: flex;
+        /* The navigation menu links */
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
         }
 
-        /* Style the sidebar */
-        .sidebar {
-            width: 300px; /* Adjust the width as needed */
-            background-color: #F79D65; /* Sidebar background color */
-            overflow-y: auto; /* Enable vertical scrolling */
-            position: fixed; /* Keep the sidebar fixed */
-            height: 100%; /* Make it full height */
+        .sidenav p {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            color: #f1f1f1;
+            display: block;
         }
 
-        /* Style the content area */
-        .content {
-            flex: 1; /* Take up remaining space */
-            padding: 20px; /* Add some spacing */
-            margin-left: 300px; /* Ensure content doesn't go behind the sidebar */
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color:  #f1f1f1;
         }
 
-        /* Style the scrollbar inside the sidebar */    
-        .sidebar::-webkit-scrollbar {
-            width: 10px; /* Set the width of the scrollbar */
+        .main {
+            margin-left: 160px; /* Same as the width of the sidebar */
+            padding: 0px 10px;
         }
 
-        .sidebar::-webkit-scrollbar-thumb {
-            background-color: #888; /* Color of the thumb */
-            border-radius: 5px; /* Rounded corners of the thumb */
-        }
-
-        .sidebar::-webkit-scrollbar-track {
-            background-color: #f1f1f1; /* Color of the track */
-        }
-
-        /* Style the sidebar links */
-        .sidebar ul li a {
-            text-decoration: none; /* Remove underlines */
-            color: #a13f3a; /* Set link color to #a13f3a */
-        }
-
-        /* Style Section 1 in the sidebar as a section title */
-        .sidebar ul li:first-child a {
-            font-weight: bold; /* Make Section 1 bold */
-        }
-
-        /* Style subsections in the sidebar */
-        .sidebar ul li:not(:first-child) a {
-            padding-left: 20px; /* Add indentation for subsections */
-        }
-        
-        /* Style the selected section */
         .selected-section {
-            border: 2px solid #3498db; /* Blue border around the selected section */
-            padding: 18px; /* Adjust padding to accommodate the border */
+            border: 2px dashed #3498db; /* Blue border around the selected section */
+            padding: 5px; /* Adjust padding to accommodate the border */
             border-radius: 10px; /* Rounded corners for the highlight */
         }
 
-        /* Style links */
-        .links {
-            text-decoration: none
-        }
-
-        /* Style software publication links */
-        .spl {
+        a {
             text-decoration: none;
-            font-size: 8;
-        }
-        /* Style paragraphs */
-        .p {
-            font-size: 30;
+            color: lightblue;
         }
     </style>
-</head>
-<body>
-    <div class="container">
-        <div class="sidebar">
-            <h1 align="center">TotoCode · Documentation</h1>
-            <ul>
-                <li><a href="#home" onclick="highlightSection('home')">Home</a></li>
-            </ul>
-            <ul>
-                <li><a href="#termy" onclick="highlightSection('termy')">Termy</a></li>
-            </ul>
-        </div>
-        <div class="content">
-            <p>You are currently on my documentation page. <a href="https://totocodefr.github.io/" class="links">Go back to the main page</a></p>
-            <!-- Main content goes here -->
-            <section id="home">
-                <h2>Home · TotoDocs</h2>
-                <h3>Welcome to my documentation!</h3>
-            </section>
-            <section id="termy">
-                <h2>Termy</h2>
-                <h3>What is Termy?</h3>
-                <a href="https://github.com/TotoCodeFR/Termy" class="spl">Termy's GitHub page</a>
-                <h1></h1>
-                <p class="p">
-                    Termy is your brand new terminal entirely made with Python.
-                </p>
-            </section>
-        </div>
-    </div>
-    
     <script>
         function highlightSection(sectionId) {
             // Remove the "selected-section" class from all sections
@@ -133,5 +80,22 @@
             selectedSection.classList.add('selected-section');
         }
     </script>
+</head>
+<body>
+    <div class="sidenav">
+        <p>Documentation</p>
+        <a href="../">Home</a>
+        <a href="#getting-started" onclick="highlightSection('getting-started')">Getting Started</a>
+    </div>
+    <div class="main">
+        <section id="getting-started">
+            <h2>
+                Getting started on TotoCode's documentation
+            </h2>
+            <p>
+                All my projects are on <a href="https://github.com/TotoCodeFR?tab=repositories" target="_blank">my GitHub</a> and on my <a href="../projects">my projects page</a>.
+            </p>
+        </section>
+    </div>
 </body>
 </html>
