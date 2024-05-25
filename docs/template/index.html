@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name | TotoCode's documentation</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300;400;700&display=swap">
+    <link rel="shortcut icon" href="../../assets/images/icon.png">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 5px;
+            height: 100%;
+            font-family: 'Fira Code', Arial, sans-serif;
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+        /* The sidebar menu */
+        .sidenav {
+            height: 100%; /* Full-height: remove this if you want "auto" height */
+            width: 250px; /* Set the width of the sidebar */
+            position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+            z-index: 1; /* Stay on top */
+            top: 0; /* Stay at the top */
+            left: 0;
+            background-color: #292929; /* Black */
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 20px;
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        .sidenav p {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            color: #f1f1f1;
+            display: block;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color:  #f1f1f1;
+        }
+
+        .main {
+            margin-left: 250px; /* Same as the width of the sidebar */
+            padding: 0px 10px;
+        }
+
+        .selected-section {
+            border: 2px dashed #3498db; /* Blue border around the selected section */
+            padding: 5px; /* Adjust padding to accommodate the border */
+            border-radius: 10px; /* Rounded corners for the highlight */
+        }
+
+        a {
+            text-decoration: none;
+            color: lightblue;
+        }
+
+        .code-embed {
+            background-color: #292929;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        #copy-code {
+            border: dashed whitesmoke;
+            background-color: #393939;
+            padding: 5px;
+            color: white;
+            font-family: 'Fira Code';
+        }
+        #code {
+            font-size: 12px;
+        }
+    </style>
+    <script>
+        function highlightSection(sectionId) {
+            const sections = document.querySelectorAll('.content section');
+            sections.forEach(section => {
+                section.classList.remove('selected-section');
+            });
+
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('selected-section');
+        }
+
+        function copycode() {
+            var codeElement = document.getElementById("code");
+            navigator.clipboard.writeText(codeElement.textContent);
+        }
+    </script>
+</head>
+<body>
+    <div class="sidenav">
+        <p>Name</p>
+        <a href="../">Docs</a>
+        <a href="#overview" onclick="highlightSection('overview')">Overview</a>
+    </div>
+    <div class="main">
+        <h1>Name</h1>
+        <section id="overview">
+            <h2>
+                Overview
+            </h2>
+            <p>
+                All my projects are on <a href="https://github.com/TotoCodeFR?tab=repositories" target="_blank">my GitHub</a> and on <a href="../projects">my projects page</a>.
+            </p>
+            <div class="code-embed">
+                <button id="copy-code" onclick="copycode()">Copy Code</button>
+                <p id="code">import random</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
