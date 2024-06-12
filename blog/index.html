@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <script type="module" src="/assets/scripts/md-block.js"></script>
+    <title>Blog | TotoCode</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300;400;700&display=swap">
     <link rel="shortcut icon" href="/assets/images/icon.png">
@@ -18,15 +17,32 @@
             color: #ffffff;
         }
 
-        .markdown {
-            padding-left: 20%;
+        .article {
+            text-decoration: none;
+            color: #ffffff;
+            width: 25%;
+        }
+
+        .article-div {
+            background-color: rgb(84, 84, 134);
+            width: 25%;
+            padding: 5px;
+            border-radius: 20px;
+        }
+
+        .article p {
+            font-size: 45px;
         }
     </style>
 </head>
 <body>
-    <div class="markdown">
-	    <md-block src="./index.md"></md-block>
+    <div class="articles">
+        <div class="article-div">
+            <a class="article" href="new-site/">
+                <p>🌐</p>
+                <h1>Remade site</h1>
+            </a>
+        </div>
     </div>
-
 </body>
 </html>
