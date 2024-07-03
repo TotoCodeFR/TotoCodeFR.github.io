@@ -74,8 +74,9 @@
     <script>
         function highlightSection(sectionId) {
             // Remove the "selected-section" class from all sections
-            const sections = document.querySelectorAll('.content section');
+            const sections = document.querySelectorAll('.selected-section');
             sections.forEach(section => {
+
                 section.classList.remove('selected-section');
             });
 
